@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 0 20px;
+      color: #222;
+      line-height: 1.5;
+    }
+    .headings {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 16px 22px;
+      margin-bottom: 28px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin: 10px 0;
+    }
+    .links {
+      margin-bottom: 28px;
+    }
+    .links a {
+      color: #2874f0;
+      font-size: 16px;
+      text-decoration: none;
+    }
+    .links a:hover {
+      text-decoration: underline;
+    }
+    .food {
+      background: #fff8f5;
+      border: 1px solid #f0d9cf;
+      border-radius: 6px;
+      padding: 16px 22px;
+    }
+    .food h2 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #e23744;
+    }
+    .food ul {
+      padding-left: 22px;
+    }
+    .food li {
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 1: full name in all six heading tags -->
+  <div class="headings">
+    <h1>Rahul Sharma</h1>
+    <h2>Rahul Sharma</h2>
+    <h3>Rahul Sharma</h3>
+    <h4>Rahul Sharma</h4>
+    <h5>Rahul Sharma</h5>
+    <h6>Rahul Sharma</h6>
+  </div>
+
+  <!-- Task 2: link to Flipkart opening in a new tab -->
+  <div class="links">
+    <a href="https://www.flipkart.com" target="_blank">Visit Flipkart</a>
+  </div>
+
+  <!-- Task 4: top 3 Zomato food items, bold and underlined -->
+  <div class="food">
+    <h2>My Top 3 Food Items on Zomato</h2>
+    <ul>
+      <li><b><u>Chicken Biryani</u></b> — Biryani Blues</li>
+      <li><b><u>Margherita Pizza</u></b> — Pizza Hut</li>
+      <li><b><u>Masala Dosa</u></b> — Dosa Junction</li>
+    </ul>
+  </div>
+
+</body>
+</html>
