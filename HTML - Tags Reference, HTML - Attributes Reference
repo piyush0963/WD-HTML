@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intern Practice – Songs, Styles, Events, Entities & ASCII</title>
+
+  <style>
+    /* ---------- Simple page styling ---------- */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    /* ---------- Task 5: ASCII table styling ---------- */
+    table {
+      border-collapse: collapse;
+      margin-top: 15px;
+      width: 100%;
+      max-width: 500px;
+    }
+    th, td {
+      border: 1px solid #888;
+      padding: 8px 14px;
+      text-align: center;
+    }
+    th {
+      background-color: #f0e6ff;
+    }
+
+    /* ---------- Task 3: input + button ---------- */
+    .input-section {
+      margin-top: 25px;
+      padding: 15px;
+      background-color: #f9f4ff;
+      border-radius: 8px;
+    }
+    input[type="text"] {
+      padding: 8px;
+      font-size: 15px;
+      border: 1px solid #bbb;
+      border-radius: 5px;
+      width: 220px;
+    }
+    button {
+      padding: 8px 18px;
+      font-size: 15px;
+      background-color: #6a1b9a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 8px;
+    }
+    button:hover {
+      background-color: #4a148c;
+    }
+  </style>
+</head>
+
+<!-- ============================================================
+     TASK 2: Inline background colour via the bgcolor attribute
+     on <body>. (Note: bgcolor is deprecated, but the task asks
+     for it specifically.)
+     ============================================================ -->
+<body bgcolor="lavender">
+
+  <div class="container">
+
+    <!-- ============================================================
+         TASK 1: List of top 5 favourite songs using multiple tags
+         Tags used: <h2>, <ul>, <li>, <b>, <i>
+         ============================================================ -->
+    <h2>🎵 My Top 5 Favourite Songs</h2>
+
+    <ul>
+      <li>
+        <!-- TASK 2: style="color:crimson" on each song title -->
+        <b style="color:crimson;">Tum Hi Ho</b>
+        — <i>Arijit Singh</i>
+      </li>
+      <li>
+        <b style="color:crimson;">Kesariya</b>
+        — <i>Arijit Singh</i>
+      </li>
+      <li>
+        <b style="color:crimson;">Blinding Lights</b>
+        — <i>The Weeknd</i>
+      </li>
+      <li>
+        <b style="color:crimson;">Shape of You</b>
+        — <i>Ed Sheeran</i>
+      </li>
+      <li>
+        <b style="color:crimson;">Believer</b>
+        — <i>Imagine Dragons</i>
+      </li>
+    </ul>
+
+    <!-- ============================================================
+         TASK 3: Input box + button with onclick event
+         ============================================================ -->
+    <div class="input-section">
+      <h2>Say Hello!</h2>
+      <p>Type something and click the button.</p>
+
+      <!-- Input box -->
+      <input type="text" id="userInput" placeholder="Type your message here">
+
+      <!-- Button triggers JavaScript alert with the entered text -->
+      <button onclick="showInput()">Show Message</button>
+    </div>
+
+    <!-- ============================================================
+         TASK 4: Rupee symbol & heart emoji using HTML entities
+         ₹ = &#8377;    ♥ = &#9829;
+         ============================================================ -->
+    <h2>Price &amp; Love</h2>
+    <p>My favourite song costs only <b>&#8377;99</b> on the music store.</p>
+    <p>Music is my <b>&#9829;</b> language!</p>
+
+    <!-- ============================================================
+         TASK 5: ASCII codes table
+         Character | Decimal | Hexadecimal
+         - 'A' → 65 → 41
+         - 'a' → 97 → 61
+         - '0' → 48 → 30
+         - '$' → 36 → 24
+         ============================================================ -->
+    <h2>ASCII Code Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Character</th>
+          <th>Decimal</th>
+          <th>Hexadecimal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&#65;</td>   <!-- 'A' -->
+          <td>65</td>
+          <td>41</td>
+        </tr>
+        <tr>
+          <td>&#97;</td>   <!-- 'a' -->
+          <td>97</td>
+          <td>61</td>
+        </tr>
+        <tr>
+          <td>&#48;</td>   <!-- '0' -->
+          <td>48</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>&#36;</td>   <!-- '$' -->
+          <td>36</td>
+          <td>24</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <!-- ============================================================
+       TASK 3: JavaScript function for the onclick handler
+       ============================================================ -->
+  <script>
+    function showInput() {
+      // Get the value typed in the input box
+      var text = document.getElementById('userInput').value;
+
+      // If the user typed something, alert it; otherwise, nudge them
+      if (text.trim() !== '') {
+        alert('You typed: ' + text);
+      } else {
+        alert('Please type something first!');
+      }
+    }
+  </script>
+
+</body>
+</html>
