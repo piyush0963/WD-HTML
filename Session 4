@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms – review, login, feedback & validation</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+    }
+    body {
+      background: linear-gradient(145deg, #f7f9fc 0%, #eef2f7 100%);
+      margin: 0;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .form-card {
+      background: white;
+      max-width: 680px;
+      width: 100%;
+      border-radius: 28px;
+      padding: 1.8rem 2.2rem 2.2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 20px 35px -10px rgba(0, 20, 30, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      transition: transform 0.1s ease;
+    }
+    .form-card:hover {
+      box-shadow: 0 22px 40px -12px rgba(0, 40, 60, 0.2);
+    }
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-top: 0.2rem;
+      margin-bottom: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #0b2a3c;
+      letter-spacing: -0.01em;
+      border-left: 7px solid #f97316;
+      padding-left: 1rem;
+    }
+    h2 i {
+      font-style: normal;
+      font-size: 1.8rem;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+      color: #1e3b4f;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .required-star {
+      color: #dc2626;
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+    input, textarea, select {
+      padding: 0.8rem 1rem;
+      border: 1.5px solid #d9e2ec;
+      border-radius: 16px;
+      font-size: 1rem;
+      background: #fbfdff;
+      transition: 0.2s;
+      width: 100%;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #f97316;
+      box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.15);
+      background: white;
+    }
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+    button {
+      background: #0b2a3c;
+      color: white;
+      border: none;
+      padding: 1rem 1.8rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: 0.15s;
+      margin-top: 0.6rem;
+      width: 100%;
+      letter-spacing: 0.01em;
+      box-shadow: 0 6px 14px rgba(11, 42, 60, 0.2);
+    }
+    button:hover {
+      background: #1a405a;
+      transform: scale(1.01);
+    }
+    button:active {
+      transform: scale(0.98);
+    }
+    .radio-group, .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2rem;
+      margin: 0.5rem 0 0.2rem;
+      padding: 0.25rem 0;
+    }
+    .radio-option, .checkbox-option {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+      color: #1e3b4f;
+    }
+    .radio-option input, .checkbox-option input {
+      width: auto;
+      margin: 0;
+      accent-color: #f97316;
+      transform: scale(1.15);
+    }
+    .inline-hint {
+      font-size: 0.85rem;
+      color: #5a6e7e;
+      margin-top: 0.4rem;
+      background: #f2f6fa;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      display: inline-block;
+    }
+    .explain-box {
+      background: #e8f0fe;
+      padding: 1.5rem 2rem;
+      border-radius: 24px;
+      margin-top: 0.8rem;
+      border-left: 8px solid #f97316;
+      color: #1a3449;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .explain-box strong {
+      color: #b45309;
+    }
+    .badge {
+      background: #f97316;
+      color: white;
+      border-radius: 60px;
+      padding: 0.2rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      margin-left: 0.7rem;
+    }
+    hr {
+      border: none;
+      border-top: 2px dashed #cbd5e1;
+      margin: 1.5rem 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Food review form – POST method, name, email, comments -->
+  <div class="form-card">
+    <h2><i>🍽️</i> Restaurant review <span class="badge">POST</span></h2>
+    <form action="foodReview.html" method="POST">
+      <div class="form-group">
+        <label for="reviewerName">Your name <span class="required-star">*</span></label>
+        <input type="text" id="reviewerName" name="reviewerName" placeholder="e.g. Ananya Sharma" required>
+      </div>
+      <div class="form-group">
+        <label for="reviewerEmail">Email address <span class="required-star">*</span></label>
+        <input type="email" id="reviewerEmail" name="reviewerEmail" placeholder="you@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="comments">Comments / review</label>
+        <textarea id="comments" name="comments" placeholder="Tell us about the food, service, ambience…"></textarea>
+      </div>
+      <button type="submit">Submit review</button>
+    </form>
+  </div>
+
+  <!-- 2. Music streaming login form – password type, required fields -->
+  <div class="form-card">
+    <h2><i>🎧</i> Music login</h2>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="musicUser">Username <span class="required-star">*</span></label>
+        <input type="text" id="musicUser" name="username" placeholder="your_username" required>
+      </div>
+      <div class="form-group">
+        <label for="musicPass">Password <span class="required-star">*</span></label>
+        <input type="password" id="musicPass" name="password" placeholder="••••••••" required>
+      </div>
+      <button type="submit">Log in</button>
+    </form>
+  </div>
+
+  <!-- 3. Movie booking feedback – radio (1-5 stars) + checkboxes for features -->
+  <div class="form-card">
+    <h2><i>🎬</i> Movie booking feedback</h2>
+    <form action="#" method="post">
+      <!-- Radio: rate experience 1-5 -->
+      <div class="form-group">
+        <label>Rate your experience (1–5 stars) <span class="required-star">*</span></label>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="rating" value="1" required> ⭐ 1</label>
+          <label class="radio-option"><input type="radio" name="rating" value="2"> ⭐ 2</label>
+          <label class="radio-option"><input type="radio" name="rating" value="3"> ⭐ 3</label>
+          <label class="radio-option"><input type="radio" name="rating" value="4"> ⭐ 4</label>
+          <label class="radio-option"><input type="radio" name="rating" value="5"> ⭐ 5</label>
+        </div>
+      </div>
+      <!-- Checkboxes: features used -->
+      <div class="form-group">
+        <label>Which features did you use?</label>
+        <div class="checkbox-group">
+          <label class="checkbox-option"><input type="checkbox" name="features" value="seat_selection"> Seat selection</label>
+          <label class="checkbox-option"><input type="checkbox" name="features" value="food_order"> Food order</label>
+          <label class="checkbox-option"><input type="checkbox" name="features" value="payment"> Payment</label>
+          <label class="checkbox-option"><input type="checkbox" name="features" value="trailer"> Trailer / preview</label>
+          <label class="checkbox-option"><input type="checkbox" name="features" value="loyalty"> Loyalty points</label>
+        </div>
+      </div>
+      <button type="submit">Send feedback</button>
+    </form>
+  </div>
+
+  <!-- 4. Email input that only accepts @gmail.com (pattern) + short explanation -->
+  <div class="form-card">
+    <h2><i>📧</i> Gmail-only input</h2>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="gmailOnly">Email (must end with @gmail.com)</label>
+        <input type="email" id="gmailOnly" name="gmailEmail" 
+               pattern="[a-zA-Z0-9._%+-]+@gmail\.com" 
+               placeholder="username@gmail.com"
+               title="Please enter a valid Gmail address (e.g., name@gmail.com)">
+        <span class="inline-hint">pattern="[a-zA-Z0-9._%+-]+@gmail\.com"</span>
+      </div>
+      <button type="submit">Submit Gmail</button>
+    </form>
+  </div>
+
+  <!-- 5. Explanation: front-end vs server-side validation -->
+  <div class="form-card" style="background: #ffffff;">
+    <h2><i>⚖️</i> Validation: front-end vs server-side</h2>
+    <div class="explain-box">
+      <p style="margin-top: 0; margin-bottom: 1.2rem;">
+        <strong>Front-end validation</strong> (HTML attributes like <code>required</code> and <code>pattern</code>) 
+        runs in the browser and gives instant feedback — it improves user experience and reduces 
+        unnecessary server round-trips. <br>
+        <strong>Server-side validation</strong> happens after the form is submitted; it re-checks all data 
+        on the server, which is essential because anything from the client can be bypassed, 
+        disabled, or spoofed.
+      </p>
+      <p style="margin-bottom: 0;">
+        <strong>Risk of relying only on front-end:</strong> A malicious user can disable JavaScript, 
+        edit the HTML, or use tools like Postman to send invalid or dangerous data (e.g., SQL injection, 
+        script tags, or an empty required field) directly to your server. Without server-side validation, 
+        that bad data can be stored or executed, compromising security and data integrity.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
