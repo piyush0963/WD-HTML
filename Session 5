@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantic HTML practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #222;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .box {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #1a3b5c;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+    }
+
+    /* ---------- Zomato style ---------- */
+    .zomato header {
+      background: #e23744;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .zomato header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+    .zomato nav {
+      background: #fff;
+      padding: 10px 20px;
+      display: flex;
+      gap: 20px;
+      border-bottom: 1px solid #ddd;
+      font-size: 14px;
+      color: #333;
+    }
+    .zomato section {
+      padding: 20px;
+    }
+    .zomato section h2 {
+      font-size: 18px;
+      border: none;
+      padding: 0;
+    }
+    .zomato footer {
+      background: #f1f1f1;
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #555;
+    }
+
+    /* ---------- News layout ---------- */
+    .news {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 20px;
+    }
+    .news > header {
+      grid-column: 1 / -1;
+      background: #1f2d3d;
+      color: #fff;
+      padding: 16px 20px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .news > header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+    .news > header nav {
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+    }
+    .news article {
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+    .news article h2 {
+      border: none;
+      padding: 0;
+      margin-bottom: 6px;
+    }
+    .news article .meta {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 14px;
+    }
+    .news aside {
+      background: #f9f9f9;
+      padding: 16px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+    .news aside h3 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+    .news aside ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+    .news aside li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    .news > footer {
+      grid-column: 1 / -1;
+      background: #f1f1f1;
+      padding: 12px;
+      text-align: center;
+      font-size: 13px;
+      color: #555;
+      border-radius: 6px;
+    }
+
+    /* ---------- Music profile ---------- */
+    .music {
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      gap: 20px;
+    }
+    .music > header {
+      grid-column: 1 / -1;
+      background: #121212;
+      color: #fff;
+      padding: 16px 20px;
+      border-radius: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .music > header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+    .music section {
+      background: #fafafa;
+      padding: 16px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin-bottom: 16px;
+    }
+    .music section h2 {
+      border: none;
+      padding: 0;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+    .music article {
+      background: #fff;
+      padding: 16px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+    .music article h3 {
+      margin: 0 0 4px;
+      font-size: 16px;
+    }
+    .music aside {
+      background: #fafafa;
+      padding: 16px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+    .music aside h3 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+    .music aside ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .music aside li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+    }
+    .music aside li:last-child {
+      border-bottom: none;
+    }
+
+    /* ---------- Flipkart style ---------- */
+    .flipkart header {
+      background: #2874f0;
+      color: #fff;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .flipkart header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+    .flipkart header nav {
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+    }
+    .flipkart > nav {
+      background: #f1f3f6;
+      padding: 10px 20px;
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+      border-bottom: 1px solid #ddd;
+    }
+    .flipkart section {
+      padding: 20px;
+    }
+    .flipkart section h2 {
+      border: none;
+      padding: 0;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 16px;
+    }
+    .products article {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 14px;
+      text-align: center;
+      background: #fff;
+    }
+    .products article h3 {
+      font-size: 15px;
+      margin: 0 0 6px;
+    }
+    .products article .price {
+      font-weight: bold;
+      color: #2874f0;
+      margin: 6px 0 4px;
+    }
+    .products article .rating {
+      background: #388e3c;
+      color: #fff;
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 12px;
+      display: inline-block;
+    }
+    .flipkart footer {
+      background: #172337;
+      color: #ccc;
+      padding: 14px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    /* ---------- explanation box ---------- */
+    .note {
+      background: #eef4fb;
+      border-left: 4px solid #2874f0;
+      padding: 14px 18px;
+      border-radius: 4px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Zomato-like homepage -->
+  <div class="box">
+    <h2>1. Food delivery homepage</h2>
+    <div class="zomato">
+      <header>
+        <h1>Foodie</h1>
+        <p>Order from your favourite restaurants</p>
+      </header>
+      <nav>
+        <span>Home</span>
+        <span>Restaurants</span>
+        <span>Offers</span>
+        <span>My Orders</span>
+      </nav>
+      <section>
+        <h2>Popular right now</h2>
+        <p>Biryani Blues, Pizza Hut, Burger King, Mainland China, Wow! Momo</p>
+      </section>
+      <footer>
+        <p>© 2025 Foodie. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- 2. News article with sidebar -->
+  <div class="box">
+    <h2>2. News article with sidebar</h2>
+    <div class="news">
+      <header>
+        <h1>Daily News</h1>
+        <nav>
+          <span>World</span>
+          <span>Tech</span>
+          <span>Sports</span>
+        </nav>
+      </header>
+
+      <article>
+        <h2>New battery tech could cut storage costs</h2>
+        <p class="meta">By R. Mehta · 3 hours ago</p>
+        <p>Researchers have developed a new battery chemistry that uses cheap, abundant materials. Early tests show a 40% reduction in cost compared to lithium-ion cells.</p>
+        <p>If scaled up, this could make grid storage far more affordable for renewable energy projects.</p>
+      </article>
+
+      <aside>
+        <h3>Related links</h3>
+        <ul>
+          <li>Solar power growth in 2025</li>
+          <li>Wind energy updates</li>
+          <li>EV charging infrastructure</li>
+        </ul>
+      </aside>
+
+      <footer>
+        <p>© 2025 Daily News</p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- 3. Music profile -->
+  <div class="box">
+    <h2>3. Music profile</h2>
+    <div class="music">
+      <header>
+        <h1>My Music</h1>
+        <span>@arjun_k</span>
+      </header>
+
+      <section>
+        <h2>Playlists</h2>
+        <p>Workout Mix · Chill Vibes · Road Trip · Study Focus</p>
+      </section>
+
+      <article>
+        <h3>Top song this month</h3>
+        <p><strong>“Kesariya”</strong> — Arijit Singh</p>
+        <p>Played 38 times in the last 30 days.</p>
+      </article>
+
+      <aside>
+        <h3>Suggested artists</h3>
+        <ul>
+          <li>Arijit Singh</li>
+          <li>Shreya Ghoshal</li>
+          <li>Pritam</li>
+          <li>AR Rahman</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <!-- 4. Explanation -->
+  <div class="box">
+    <h2>4. Divs vs semantic tags</h2>
+    <div class="note">
+      <p>Using only &lt;div&gt; tags gives no meaning to the structure. Screen readers and search engines can't tell which part is navigation, which is the main article, or which is a sidebar.</p>
+      <p>Semantic tags like &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;aside&gt;, and &lt;footer&gt; describe what each section is for. This helps screen reader users jump directly to the main content or navigation, and it helps search engines understand the page better.</p>
+      <p>If you rely only on divs, a blind user might have to listen through the entire page to find the main article. With semantic tags, they can skip straight to it.</p>
+    </div>
+  </div>
+
+  <!-- 5. Flipkart style product listing -->
+  <div class="box">
+    <h2>5. Product listing (no divs for layout)</h2>
+    <div class="flipkart">
+      <header>
+        <h1>ShopKart</h1>
+        <nav>
+          <span>Become a Seller</span>
+          <span>Cart</span>
+        </nav>
+      </header>
+
+      <nav>
+        <span>Electronics</span>
+        <span>Fashion</span>
+        <span>Home</span>
+        <span>Beauty</span>
+      </nav>
+
+      <section>
+        <h2>Top offers</h2>
+        <div class="products">
+          <article>
+            <h3>Smartphone X</h3>
+            <p class="price">₹18,999</p>
+            <span class="rating">4.3 ★</span>
+          </article>
+          <article>
+            <h3>Wireless Earbuds</h3>
+            <p class="price">₹1,799</p>
+            <span class="rating">4.1 ★</span>
+          </article>
+          <article>
+            <h3>Smart TV 43"</h3>
+            <p class="price">₹24,499</p>
+            <span class="rating">4.5 ★</span>
+          </article>
+          <article>
+            <h3>Running Shoes</h3>
+            <p class="price">₹2,299</p>
+            <span class="rating">4.0 ★</span>
+          </article>
+          <article>
+            <h3>Coffee Maker</h3>
+            <p class="price">₹3,499</p>
+            <span class="rating">4.2 ★</span>
+          </article>
+        </div>
+      </section>
+
+      <footer>
+        <p>© 2025 ShopKart · About · Contact · Privacy</p>
+      </footer>
+    </div>
+    <p style="font-size: 13px; color: #777; margin-top: 10px;">
+      Note: one &lt;div&gt; is used as a grid wrapper for the products. Everything else uses semantic tags.
+    </p>
+  </div>
+
+</body>
+</html>
