@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intern Practice – Fonts, Forms, Iframes, Marquee & Scripts</title>
+
+  <!-- ============================================================
+       TASK 1: Google Fonts for unique font families
+       (Each section will use a different font.)
+       ============================================================ -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Playfair+Display:ital@1&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ---------- General page styling ---------- */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* ============================================================
+       TASK 4: BookMyShow-style marquee banner
+       ============================================================ */
+    .bms-marquee {
+      background-color: #ffcc00; /* BookMyShow yellow */
+      color: #000;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 8px 0;
+    }
+
+    /* ============================================================
+       TASK 4: Header with background colour
+       ============================================================ */
+    header {
+      background-color: #d81b60; /* BookMyShow pink/red */
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    /* ============================================================
+       TASK 1: Music profile with unique fonts
+       ============================================================ */
+    .music-profile {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 25px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .singer-name {
+      /* Font #1: Poppins, bold, big */
+      font-family: 'Poppins', sans-serif;
+      font-size: 36px;
+      color: #6a1b9a;
+      margin: 0 0 10px;
+    }
+    .top-song {
+      /* Font #2: Playfair Display, italic, medium */
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 24px;
+      color: #d81b60;
+      margin: 0 0 15px;
+    }
+    .bio {
+      /* Font #3: Caveat, handwritten style */
+      font-family: 'Caveat', cursive;
+      font-size: 22px;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    /* ============================================================
+       TASK 2: Flipkart-style product feedback form
+       ============================================================ */
+    .feedback-form {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 25px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .feedback-form h2 {
+      color: #2874f0; /* Flipkart blue */
+      margin-top: 0;
+    }
+    .form-group {
+      margin-bottom: 18px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #333;
+    }
+    /* Input #1: text input */
+    .form-group input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+    /* Input #2: radio buttons (star rating) */
+    .stars label {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    /* Input #3: textarea for review */
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      min-height: 90px;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+    /* Input #4: file upload */
+    .form-group input[type="file"] {
+      font-size: 14px;
+    }
+    .submit-btn {
+      background-color: #2874f0;
+      color: white;
+      border: none;
+      padding: 12px 26px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background-color: #1a5dc8;
+    }
+
+    /* ============================================================
+       TASK 3: Embedded YouTube + Spotify
+       ============================================================ */
+    .embed-section {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 25px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .embed-section h2 {
+      margin-top: 0;
+      color: #1db954; /* Spotify green */
+    }
+    .embed-wrapper {
+      margin-bottom: 20px;
+    }
+    .embed-wrapper h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: #333;
+    }
+    iframe {
+      border-radius: 8px;
+      border: none;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       TASK 4: BookMyShow-style marquee
+       ============================================================ -->
+  <marquee class="bms-marquee" behavior="scroll" direction="left" scrollamount="8">
+    🎬 Biggest Blockbusters Now Showing! 🎬
+  </marquee>
+
+  <!-- ============================================================
+       TASK 4: Header with background colour
+       ============================================================ -->
+  <header>
+    <h1>BookMyShow</h1>
+    <p>Your one-stop destination for movies & music</p>
+  </header>
+
+  <div class="container">
+
+    <!-- ============================================================
+         TASK 1: Music profile with 3 unique fonts
+         ============================================================ -->
+    <section class="music-profile">
+      <h2 style="font-family: Arial; color:#555; margin-top:0;">🎤 My Favourite Singer</h2>
+
+      <!-- Font #1: Poppins (singer's name) -->
+      <h3 class="singer-name">Arijit Singh</h3>
+
+      <!-- Font #2: Playfair Display Italic (top song) -->
+      <p class="top-song">Top Song: "Tum Hi Ho"</p>
+
+      <!-- Font #3: Caveat (bio) -->
+      <p class="bio">
+        Arijit Singh is one of India's most beloved playback singers, known for his soulful voice
+        and emotional depth. He has won numerous awards and continues to rule the charts with
+        every new release.
+      </p>
+    </section>
+
+    <!-- ============================================================
+         TASK 2: Flipkart-style product feedback form
+         ============================================================ -->
+    <section class="feedback-form">
+      <h2>📝 Product Feedback</h2>
+
+      <form onsubmit="event.preventDefault(); alert('Thank you for your feedback!');">
+
+        <!-- Input #1: text input for product name -->
+        <div class="form-group">
+          <label for="productName">Product Name:</label>
+          <input type="text" id="productName" name="productName"
+                 placeholder="e.g. Realme Buds Wireless 3" required>
+        </div>
+
+        <!-- Input #2: radio buttons for star rating (1-5) -->
+        <div class="form-group stars">
+          <label>Rating:</label>
+          <label><input type="radio" name="rating" value="1" required> ⭐ 1</label>
+          <label><input type="radio" name="rating" value="2"> ⭐ 2</label>
+          <label><input type="radio" name="rating" value="3"> ⭐ 3</label>
+          <label><input type="radio" name="rating" value="4"> ⭐ 4</label>
+          <label><input type="radio" name="rating" value="5"> ⭐ 5</label>
+        </div>
+
+        <!-- Input #3: textarea for review -->
+        <div class="form-group">
+          <label for="review">Your Review:</label>
+          <textarea id="review" name="review"
+                    placeholder="Tell us what you liked or disliked..."></textarea>
+        </div>
+
+        <!-- Input #4: file upload for product photo -->
+        <div class="form-group">
+          <label for="productPhoto">Upload Product Photo:</label>
+          <input type="file" id="productPhoto" name="productPhoto" accept="image/*">
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Feedback</button>
+      </form>
+    </section>
+
+    <!-- ============================================================
+         TASK 3: Embedded YouTube + Spotify
+         ============================================================ -->
+    <section class="embed-section">
+      <h2>🎥 Watch & 🎧 Listen</h2>
+
+      <!-- YouTube embed: IPL 2016 Final – Ben Cutting's stunning innings
+           (A memorable IPL cricket moment) -->
+      <div class="embed-wrapper">
+        <h3>Favourite IPL Cricket Moment</h3>
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/1s9Bk5a0eSk"
+                title="Favourite IPL Cricket Moment"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- Spotify embed: a popular track -->
+      <div class="embed-wrapper">
+        <h3>Now Playing on Spotify</h3>
+        <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/track/2LBqCSwhJGcFQeTHMVGwy3"
+                width="100%" height="152"
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============================================================
+       TASK 5: JavaScript showWelcome() with window.onload
+       ============================================================ -->
+  <script>
+    // Function that shows a welcome alert
+    function showWelcome() {
+      alert('Welcome to Swiggy Deals!');
+    }
+
+    // Trigger the function automatically when the page loads
+    window.onload = showWelcome;
+  </script>
+
+</body>
+</html>
