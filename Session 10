@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music, Videos & Chill Beats</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #222;
+      line-height: 1.6;
+      background: #f4f6f8;
+    }
+
+    nav {
+      background: #1a3b5c;
+      border-radius: 10px;
+      padding: 12px 18px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #f0b429;
+    }
+
+    .block {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+    }
+
+    .block h2 {
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 14px;
+      color: #1a3b5c;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+    }
+
+    audio,
+    video {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 8px;
+      display: block;
+      margin-top: 6px;
+    }
+
+    .video-wrap {
+      text-align: center;
+    }
+
+    .video-wrap iframe {
+      width: 100%;
+      max-width: 560px;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .song {
+      margin-bottom: 18px;
+    }
+
+    .song:last-child {
+      margin-bottom: 0;
+    }
+
+    .song strong {
+      font-size: 15px;
+      color: #1a3b5c;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 12px;
+      }
+
+      .block {
+        padding: 16px;
+      }
+
+      nav {
+        gap: 10px;
+        padding: 10px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#song">Favourite Song</a>
+    <a href="#ipl">IPL Highlights</a>
+    <a href="#clip">Short Clip</a>
+    <a href="#playlist">Chill Beats</a>
+    <a href="#limited">Limited Video</a>
+  </nav>
+
+  <section class="block" id="song">
+    <h2>1. My Favourite Song</h2>
+    <audio controls>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <section class="block" id="ipl">
+    <h2>2. IPL Highlights</h2>
+    <div class="video-wrap">
+      <iframe
+        src="https://www.youtube.com/embed/OV3aFAP7T-A"
+        title="IPL highlights"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <section class="block" id="clip">
+    <h2>3. Short Clip</h2>
+    <video autoplay loop muted playsinline>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section class="block" id="playlist">
+    <h2>4. Chill Beats Playlist</h2>
+
+    <article class="song">
+      <strong>Track 1 — SoundHelix Song 2</strong>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </article>
+
+    <article class="song">
+      <strong>Track 2 — SoundHelix Song 3</strong>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </article>
+  </section>
+
+  <section class="block" id="limited">
+    <h2>5. Video With Limited Controls</h2>
+    <video controls controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+</body>
+</html>
