@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Intern Practice – Web Editor Tasks</title>
+
+  <style>
+    /* ---------- Simple page styling ---------- */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+      color: #222;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    /* ---------- Task 1: Hello heading ---------- */
+    h1 {
+      color: #6a1b9a;
+      text-align: center;
+    }
+
+    /* ---------- Task 2: Profile card ---------- */
+    .profile-card {
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      max-width: 320px;
+      margin: 20px auto;
+      background-color: #fafafa;
+    }
+    .profile-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffb300; /* IPL yellow */
+    }
+    .profile-card h2 {
+      margin: 12px 0 5px;
+      color: #0d47a1;
+    }
+    .profile-card p {
+      margin: 4px 0;
+      color: #555;
+    }
+
+    /* ---------- Task 3: Zomato-style menu ---------- */
+    .menu-table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .menu-table th, .menu-table td {
+      border: 1px solid #ddd;
+      padding: 10px 15px;
+      text-align: left;
+    }
+    .menu-table th {
+      background-color: #e53935; /* Zomato red */
+      color: white;
+    }
+    .menu-table tr:nth-child(even) {
+      background-color: #fff5f5;
+    }
+    .price {
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    /* ---------- Task 4: Order button ---------- */
+    .order-section {
+      text-align: center;
+      margin-top: 25px;
+    }
+    .order-btn {
+      background-color: #e53935;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .order-btn:hover {
+      background-color: #c62828;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- ============================================================
+         TASK 1: 'Hello, Web World!' in an <h1> tag
+         ============================================================ -->
+    <h1>Hello, Web World!</h1>
+
+    <!-- ============================================================
+         TASK 2: Profile card for a favourite IPL cricket player
+         Using <div>, <img>, <h2>, and <p>
+         ============================================================ -->
+    <div class="profile-card">
+      <!-- Placeholder profile picture (feel free to swap the src) -->
+      <img src="https://via.placeholder.com/120/0d47a1/ffffff?text=MSD"
+           alt="Profile picture of MS Dhoni">
+      <h2>MS Dhoni</h2>
+      <p><b>Team:</b> Chennai Super Kings (CSK)</p>
+      <p><b>Role:</b> Wicket-keeper Batsman</p>
+      <p><i>"Captain Cool"</i></p>
+    </div>
+
+    <!-- ============================================================
+         TASK 3: Zomato-style restaurant menu with 3+ items
+         Using a table to show dish name and price
+         ============================================================ -->
+    <h2 style="color:#e53935;">🍽️ Zomato Menu – Spice Route</h2>
+
+    <table class="menu-table">
+      <thead>
+        <tr>
+          <th>Dish Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Chicken Biryani</td>
+          <td class="price">₹280</td>
+        </tr>
+        <tr>
+          <td>Paneer Butter Masala</td>
+          <td class="price">₹240</td>
+        </tr>
+        <tr>
+          <td>Masala Dosa</td>
+          <td class="price">₹120</td>
+        </tr>
+        <tr>
+          <td>Gulab Jamun (2 pcs)</td>
+          <td class="price">₹90</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ============================================================
+         TASK 4: Clickable button showing 'Order Placed!' alert
+         ============================================================ -->
+    <div class="order-section">
+      <button class="order-btn" onclick="placeOrder()">Order Now</button>
+    </div>
+
+  </div>
+
+  <!-- ============================================================
+       TASK 4: JavaScript handler for the button
+       ============================================================ -->
+  <script>
+    function placeOrder() {
+      alert('Order Placed!');
+    }
+  </script>
+
+</body>
+</html>
