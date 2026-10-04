@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPL, Food Apps, Login & Purchases</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 24px 18px;
+      background: #f4f6f8;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .block {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+    }
+
+    .block h2 {
+      font-size: 19px;
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: #1a3b5c;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+    }
+
+    ul.teams {
+      padding-left: 22px;
+      margin: 0;
+    }
+
+    ul.teams > li {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 12px;
+      color: #1a3b5c;
+    }
+
+    ul.teams ol {
+      margin-top: 6px;
+      margin-bottom: 4px;
+      padding-left: 24px;
+    }
+
+    ul.teams ol li {
+      font-weight: normal;
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 3px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 4px;
+    }
+
+    caption {
+      caption-side: top;
+      text-align: left;
+      font-weight: bold;
+      font-size: 15px;
+      color: #1a3b5c;
+      padding-bottom: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px 12px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th {
+      background: #f0f4f8;
+      color: #1a3b5c;
+    }
+
+    tr:nth-child(even) td {
+      background: #fafbfc;
+    }
+
+    form label {
+      display: block;
+      margin-top: 14px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    form input[type="email"],
+    form input[type="password"] {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: inherit;
+    }
+
+    form input:focus {
+      outline: none;
+      border-color: #1db954;
+      box-shadow: 0 0 0 3px rgba(29, 185, 84, 0.15);
+    }
+
+    form button {
+      margin-top: 20px;
+      background: #1db954;
+      color: #fff;
+      border: none;
+      padding: 11px 26px;
+      font-size: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #17a347;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 14px 10px;
+      }
+
+      .block {
+        padding: 16px;
+      }
+
+      th, td {
+        padding: 8px 6px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="block">
+    <h2>My Top 5 IPL Teams &amp; Players</h2>
+    <ul class="teams">
+      <li>
+        Mumbai Indians
+        <ol>
+          <li>Rohit Sharma</li>
+          <li>Jasprit Bumrah</li>
+          <li>Hardik Pandya</li>
+        </ol>
+      </li>
+      <li>
+        Chennai Super Kings
+        <ol>
+          <li>MS Dhoni</li>
+          <li>Ruturaj Gaikwad</li>
+          <li>Ravindra Jadeja</li>
+        </ol>
+      </li>
+      <li>
+        Royal Challengers Bengaluru
+        <ol>
+          <li>Virat Kohli</li>
+          <li>Faf du Plessis</li>
+          <li>Mohammed Siraj</li>
+        </ol>
+      </li>
+      <li>
+        Kolkata Knight Riders
+        <ol>
+          <li>Shreyas Iyer</li>
+          <li>Andre Russell</li>
+          <li>Sunil Narine</li>
+        </ol>
+      </li>
+      <li>
+        Rajasthan Royals
+        <ol>
+          <li>Sanju Samson</li>
+          <li>Jos Buttler</li>
+          <li>Yashasvi Jaiswal</li>
+        </ol>
+      </li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>Food Delivery App Comparison</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>App Name</th>
+          <th>Delivery Charges</th>
+          <th>User Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Zomato</td>
+          <td>₹29 – ₹49</td>
+          <td>4.4 ★</td>
+        </tr>
+        <tr>
+          <td>Swiggy</td>
+          <td>₹25 – ₹45</td>
+          <td>4.3 ★</td>
+        </tr>
+        <tr>
+          <td>Uber Eats</td>
+          <td>₹30 – ₹55</td>
+          <td>4.1 ★</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="block">
+    <h2>Music Streaming Login</h2>
+    <form action="#" method="post">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <button type="submit">Log In</button>
+    </form>
+  </section>
+
+  <section class="block">
+    <h2>My Last 5 Online Purchases</h2>
+    <table>
+      <caption>Last 5 online purchases with product name, app used, and price</caption>
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>App Used</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Wireless Earbuds</td>
+          <td>Flipkart</td>
+          <td>₹1,799</td>
+        </tr>
+        <tr>
+          <td>Running Shoes</td>
+          <td>Myntra</td>
+          <td>₹2,299</td>
+        </tr>
+        <tr>
+          <td>Smartphone Cover</td>
+          <td>Amazon</td>
+          <td>₹349</td>
+        </tr>
+        <tr>
+          <td>Bluetooth Speaker</td>
+          <td>Amazon</td>
+          <td>₹1,499</td>
+        </tr>
+        <tr>
+          <td>Cotton T-Shirt</td>
+          <td>Myntra</td>
+          <td>₹699</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</body>
+</html>
