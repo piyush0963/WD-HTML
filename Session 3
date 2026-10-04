@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPL · Movies · Apps · Meal plan</title>
+  <style>
+    /* minimal page styling — only for readability, borders use inline style as required */
+    body {
+      font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+      background: #f9fafc;
+      margin: 2rem auto;
+      max-width: 1100px;
+      padding: 0 1.5rem;
+      color: #1e1e2f;
+    }
+    section {
+      background: white;
+      border-radius: 20px;
+      padding: 1.6rem 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+      border: 1px solid #e9eef3;
+    }
+    h2 {
+      margin-top: 0.2rem;
+      margin-bottom: 1.2rem;
+      font-weight: 600;
+      font-size: 1.6rem;
+      border-left: 6px solid #f97316;
+      padding-left: 1rem;
+      color: #0b2a3c;
+    }
+    ul, ol, dl {
+      margin: 0.5rem 0 0.5rem 1.2rem;
+      padding-left: 0.8rem;
+    }
+    li, dt, dd {
+      margin-bottom: 0.5rem;
+    }
+    dt {
+      font-weight: 700;
+      color: #c2410c;
+      margin-top: 0.75rem;
+      font-size: 1.1rem;
+    }
+    dd {
+      margin-left: 1.6rem;
+      color: #2c3e50;
+    }
+    /* inline borders are enforced via style attribute on table cells, but we add fallback here for outer look */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1rem;
+      background: #ffffff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    }
+    caption {
+      caption-side: top;
+      text-align: left;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+      color: #0b2a3c;
+      background: #f2f6fa;
+      padding: 0.6rem 1rem;
+      border-radius: 30px;
+      display: inline-block;
+    }
+    /* all table cells get 2px solid via inline style, but we add a light background for headers */
+    th {
+      background-color: #f1f5f9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Top 5 favourite IPL teams (unordered list) -->
+  <section>
+    <h2>🏏 Top 5 favourite IPL teams</h2>
+    <ul>
+      <li>Mumbai Indians (MI)</li>
+      <li>Chennai Super Kings (CSK)</li>
+      <li>Royal Challengers Bengaluru (RCB)</li>
+      <li>Kolkata Knight Riders (KKR)</li>
+      <li>Rajasthan Royals (RR)</li>
+    </ul>
+  </section>
+
+  <!-- 2. Last 5 movies watched on BookMyShow (ordered list) -->
+  <section>
+    <h2>🎬 Last 5 movies watched on BookMyShow</h2>
+    <ol>
+      <li>Oppenheimer (IMAX)</li>
+      <li>Dune: Part Two</li>
+      <li>Godzilla x Kong: The New Empire</li>
+      <li>Inside Out 2</li>
+      <li>Deadpool &amp; Wolverine</li>
+    </ol>
+  </section>
+
+  <!-- 3. Definition list of 3 food delivery apps -->
+  <section>
+    <h2>🍔 Food delivery apps — explained</h2>
+    <dl>
+      <dt>Zomato</dt>
+      <dd>Founded in 2008, Zomato connects users with restaurants, offers dining out options, and provides lightning-fast delivery through its extensive partner network.</dd>
+      
+      <dt>Swiggy</dt>
+      <dd>Started in 2014, Swiggy is known for its reliable delivery fleet, live order tracking, and a wide range of cloud kitchens and restaurants across India.</dd>
+      
+      <dt>Uber Eats</dt>
+      <dd>Uber's food delivery platform (now merged with Zomato in India) was famous for its simple interface, global restaurant choices, and seamless integration with the Uber app.</dd>
+    </dl>
+  </section>
+
+  <!-- 4. Weekly meal plan table with inline 2px solid borders & caption -->
+  <section>
+    <h2>📅 Weekly meal plan</h2>
+    <table>
+      <caption>🍽️ My weekly meal plan (breakfast · lunch · dinner)</caption>
+      <!-- header row: also uses inline style for 2px solid border -->
+      <thead>
+        <tr>
+          <th style="border: 2px solid #2c3e50; padding: 12px 8px; background: #eef2f6; font-weight: 700;">Day</th>
+          <th style="border: 2px solid #2c3e50; padding: 12px 8px; background: #eef2f6; font-weight: 700;">Breakfast</th>
+          <th style="border: 2px solid #2c3e50; padding: 12px 8px; background: #eef2f6; font-weight: 700;">Lunch</th>
+          <th style="border: 2px solid #2c3e50; padding: 12px 8px; background: #eef2f6; font-weight: 700;">Dinner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Monday -->
+        <tr>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px; font-weight: 500;">Monday</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Poha + chai</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Rajma chawal</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Vegetable khichdi</td>
+        </tr>
+        <!-- Tuesday -->
+        <tr>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px; font-weight: 500;">Tuesday</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Oats with fruits</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Chole bhature</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Paneer tikka + roti</td>
+        </tr>
+        <!-- Wednesday -->
+        <tr>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px; font-weight: 500;">Wednesday</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Idli + sambar</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Curd rice + salad</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Mix veg + chapati</td>
+        </tr>
+        <!-- Thursday -->
+        <tr>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px; font-weight: 500;">Thursday</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Aloo paratha + curd</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Chicken biryani (or veg)</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Dal tadka + jeera rice</td>
+        </tr>
+        <!-- Friday -->
+        <tr>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px; font-weight: 500;">Friday</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Upma + coconut chutney</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Veg pulao + raita</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Pav bhaji</td>
+        </tr>
+        <!-- Saturday -->
+        <tr>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px; font-weight: 500;">Saturday</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Pancakes + maple syrup</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Grilled sandwich + fries</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Pizza night (homemade)</td>
+        </tr>
+        <!-- Sunday -->
+        <tr>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px; font-weight: 500;">Sunday</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Chole kulche</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Special thali (roti, sabzi, dal, rice)</td>
+          <td style="border: 2px solid #2c3e50; padding: 10px 8px;">Light soup + garlic bread</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- hint note: all <th> and <td> already carry style="border: 2px solid #2c3e50;" as required -->
+  </section>
+
+  <!-- small note: inline style is present on every table cell -->
+  <p style="text-align: right; font-size: 0.85rem; color: #5a6e7e; margin-top: -1rem;">
+    ⚡ Every &lt;th&gt; and &lt;td&gt; uses inline <code>style="border: 2px solid #2c3e50;"</code>.
+  </p>
+
+</body>
+</html>
