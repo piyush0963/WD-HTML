@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intern Practice – Storage, Location & Canvas</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #222;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 { text-align: center; color: #2c3e50; }
+    .task-box {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+    }
+    .task-box h2 {
+      margin-top: 0;
+      color: #2c3e50;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    button:hover { background-color: #2980b9; }
+    #locationResult {
+      margin-top: 12px;
+      font-size: 16px;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+    /* Make the canvas very visible */
+    #cricketBall {
+      border: 3px solid black;
+      background-color: #e8f0e8;
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Intern Practice Tasks</h1>
+
+  <!-- TASK 2 -->
+  <div class="task-box">
+    <h2>Task 2: Save Favorite Food (sessionStorage)</h2>
+    <p>Click the button below and enter your favorite food.</p>
+    <button id="saveFoodBtn">Save Favorite Food</button>
+    <p id="foodResult"></p>
+  </div>
+
+  <!-- TASK 3 -->
+  <div class="task-box">
+    <h2>Task 3: Show My Location</h2>
+    <p>Click the button to get your latitude and longitude.</p>
+    <button id="locationBtn">Show My Location</button>
+    <div id="locationResult">Location will appear here...</div>
+  </div>
+
+  <!-- TASK 4 -->
+  <div class="task-box">
+    <h2>Task 4: Cricket Ball (Canvas)</h2>
+    <p>A red ball with a white seam inside a 200x200 canvas.</p>
+    <canvas id="cricketBall" width="200" height="200"></canvas>
+  </div>
+
+  <script>
+    /* ==========================================================
+       Wait until the whole page (including the canvas) is loaded
+       ========================================================== */
+    window.onload = function () {
+
+      /* ========================================================
+         TASK 4 FIRST — draw the cricket ball
+         (draw first so the alert from Task 1 doesn't interrupt)
+         ======================================================== */
+      const canvas = document.getElementById('cricketBall');
+      const ctx = canvas.getContext('2d');
+
+      // Red ball (center 100,100 ; radius 70)
+      ctx.beginPath();
+      ctx.arc(100, 100, 70, 0, Math.PI * 2);
+      ctx.fillStyle = '#e74c3c';
+      ctx.fill();
+      ctx.strokeStyle = '#922b21';
+      ctx.lineWidth = 3;
+      ctx.stroke();
+
+      // White curved seam
+      ctx.beginPath();
+      ctx.moveTo(100, 30);
+      ctx.quadraticCurveTo(130, 100, 100, 170);
+      ctx.strokeStyle = 'white';
+      ctx.lineWidth = 4;
+      ctx.stroke();
+
+      // Little stitches
+      ctx.lineWidth = 2;
+      for (let y = 45; y <= 155; y += 15) {
+        ctx.beginPath();
+        ctx.moveTo(100, y);
+        ctx.lineTo(112, y + 5);
+        ctx.stroke();
+      }
+
+      /* ========================================================
+         TASK 1 — localStorage (fires AFTER ball is drawn)
+         ======================================================== */
+      localStorage.setItem('spotifyUser', 'your_spotify_username');
+      const savedUser = localStorage.getItem('spotifyUser');
+      alert('Spotify user retrieved from localStorage: ' + savedUser);
+
+      /* ========================================================
+         TASK 2 — sessionStorage
+         ======================================================== */
+      const saveFoodBtn = document.getElementById('saveFoodBtn');
+      const foodResult = document.getElementById('foodResult');
+
+      saveFoodBtn.addEventListener('click', function () {
+        const food = prompt('What is your favorite food? (e.g. pizza, biryani)');
+        if (food) {
+          sessionStorage.setItem('favFood', food);
+          foodResult.textContent = 'Your favorite food is saved: ' + food;
+        } else {
+          foodResult.textContent = 'No food entered. Try again!';
+        }
+      });
+
+      /* ========================================================
+         TASK 3 — Geolocation
+         ======================================================== */
+      const locationBtn = document.getElementById('locationBtn');
+      const locationResult = document.getElementById('locationResult');
+
+      locationBtn.addEventListener('click', function () {
+        if (navigator.geolocation) {
+          locationResult.textContent = 'Getting your location...';
+          navigator.geolocation.getCurrentPosition(
+            function (position) {
+              const lat = position.coords.latitude;
+              const lon = position.coords.longitude;
+              locationResult.textContent =
+                'Latitude: ' + lat.toFixed(4) + ' , Longitude: ' + lon.toFixed(4);
+            },
+            function (error) {
+              locationResult.textContent =
+                'Could not get location. Error: ' + error.message;
+            }
+          );
+        } else {
+          locationResult.textContent =
+            'Geolocation is not supported by your browser.';
+        }
+      });
+    };
+  </script>
+
+</body>
+</html>
