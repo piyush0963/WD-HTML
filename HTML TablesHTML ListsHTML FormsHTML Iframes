@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food, Movies, Reviews, Cricket & Apps</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #222;
+      margin: 0;
+      padding: 24px;
+      line-height: 1.5;
+    }
+
+    .block {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 30px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .block h2 {
+      font-size: 19px;
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: #1a3b5c;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+    }
+
+    /* table */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px 12px;
+      text-align: left;
+      font-size: 14px;
+    }
+    th {
+      background: #f0f4f8;
+    }
+
+    /* ordered list */
+    ol {
+      padding-left: 22px;
+      margin: 0;
+    }
+    ol li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    /* form */
+    form label {
+      display: block;
+      margin-top: 14px;
+      margin-bottom: 4px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    form input[type="text"],
+    form input[type="number"],
+    form textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+    form textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+    form button {
+      margin-top: 18px;
+      background: #2874f0;
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      font-size: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #1c5cc4;
+    }
+
+    /* iframe */
+    .video-wrap {
+      text-align: center;
+    }
+    .video-wrap iframe {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
+    /* nested list */
+    ul.apps {
+      padding-left: 22px;
+      margin: 0;
+    }
+    ul.apps > li {
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+    ul.apps ul {
+      margin-top: 6px;
+      margin-bottom: 4px;
+      padding-left: 20px;
+    }
+    ul.apps ul li {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Favourite food items table -->
+  <div class="block">
+    <h2>My Top 5 Food Orders (Zomato / Swiggy)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Food Name</th>
+          <th>Restaurant</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Chicken Biryani</td>
+          <td>Biryani Blues</td>
+          <td>₹320</td>
+        </tr>
+        <tr>
+          <td>Margherita Pizza</td>
+          <td>Pizza Hut</td>
+          <td>₹299</td>
+        </tr>
+        <tr>
+          <td>Masala Dosa</td>
+          <td>Dosa Junction</td>
+          <td>₹120</td>
+        </tr>
+        <tr>
+          <td>Chole Bhature</td>
+          <td>Haldiram's</td>
+          <td>₹180</td>
+        </tr>
+        <tr>
+          <td>Veg Hakka Noodles</td>
+          <td>Wow! Momo</td>
+          <td>₹210</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 2. Ordered list – BookMyShow steps -->
+  <div class="block">
+    <h2>Steps to Book a Movie Ticket on BookMyShow</h2>
+    <ol>
+      <li>Open BookMyShow and select your city.</li>
+      <li>Search for the movie you want to watch.</li>
+      <li>Pick a cinema, show date, and showtime.</li>
+      <li>Select the number of seats and choose your preferred seats.</li>
+      <li>Review the ticket summary and click "Proceed".</li>
+      <li>Enter your contact details and apply any promo code.</li>
+      <li>Complete the payment using UPI, card, or wallet.</li>
+      <li>Receive the ticket confirmation via SMS and email.</li>
+    </ol>
+  </div>
+
+  <!-- 3. Flipkart-style product review form -->
+  <div class="block">
+    <h2>Product Review (Flipkart Style)</h2>
+    <form action="#" method="post">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="product">Product Name</label>
+      <input type="text" id="product" name="product" required>
+
+      <label for="rating">Rating (1-5)</label>
+      <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+      <label for="review">Review Message</label>
+      <textarea id="review" name="review" placeholder="Share your experience with this product..."></textarea>
+
+      <button type="submit">Submit Review</button>
+    </form>
+  </div>
+
+  <!-- 4. YouTube embed – Top 10 Greatest IPL Matches -->
+  <div class="block">
+    <h2>Favourite IPL Moment</h2>
+    <div class="video-wrap">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/OV3aFAP7T-A"
+        title="Top 10 Greatest IPL Matches"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- 5. Most-used apps with nested features -->
+  <div class="block">
+    <h2>My 5 Most-Used Mobile Apps</h2>
+    <ul class="apps">
+      <li>
+        WhatsApp
+        <ul>
+          <li>Sending voice notes</li>
+          <li>Sharing photos in family groups</li>
+        </ul>
+      </li>
+      <li>
+        Instagram
+        <ul>
+          <li>Watching Reels</li>
+          <li>Posting stories</li>
+        </ul>
+      </li>
+      <li>
+        Paytm
+        <ul>
+          <li>Scanning QR codes to pay</li>
+          <li>Recharging mobile data</li>
+        </ul>
+      </li>
+      <li>
+        Spotify
+        <ul>
+          <li>Downloading playlists for offline use</li>
+          <li>Discover Weekly recommendations</li>
+        </ul>
+      </li>
+      <li>
+        Google Maps
+        <ul>
+          <li>Live traffic navigation</li>
+          <li>Finding nearby restaurants</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+</body>
+</html>
