@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formatting Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 0 20px;
+      color: #222;
+      line-height: 1.7;
+    }
+    .demo {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 20px 24px;
+    }
+    .demo h2 {
+      margin-top: 0;
+      font-size: 19px;
+      color: #1a3b5c;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+    }
+    mark {
+      background: #ffe066;
+      padding: 0 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="demo">
+    <h2>My Favourite App: Spotify</h2>
+
+    <p>
+      <b>Spotify</b> is my <i>go-to</i> app for music. I have been using it for
+      <u>three years</u> now, and it has <mark>completely changed</mark> how I
+      listen to songs. The free version is <small>decent</small>, but I switched
+      to Premium and never looked back — ads are <del>annoying</del>
+      <ins>gone</ins>, and downloads work offline.
+      <br><br>
+      What I love most is the <b>Discover Weekly</b> playlist. It uses
+      <i>H<sub>2</sub>O</i>-level simplicity — you just tap play.
+      Honestly, the recommendation quality is 10<sup>2</sup> times better than
+      any other app I've tried. The interface is clean, the sound quality is
+      great, and the <small>offline mode</small> saves my data every day.
+    </p>
+  </div>
+
+</body>
+</html>
