@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies – My Top 5</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #222;
+    }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 18px 24px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+    nav {
+      background: #34495e;
+      padding: 10px 24px;
+      display: flex;
+      gap: 24px;
+    }
+    nav a {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-size: 15px;
+    }
+    nav a:hover {
+      color: #f39c12;
+    }
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    main h2 {
+      font-size: 22px;
+      border-bottom: 2px solid #f39c12;
+      padding-bottom: 6px;
+    }
+    .jump-list {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 14px 20px;
+      border-radius: 6px;
+      margin-bottom: 30px;
+    }
+    .jump-list ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+    .jump-list li {
+      margin-bottom: 6px;
+    }
+    .jump-list a {
+      color: #2c3e50;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .jump-list a:hover {
+      text-decoration: underline;
+    }
+    .movie {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+    }
+    .movie h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      color: #2c3e50;
+    }
+    .movie p {
+      margin: 4px 0;
+      font-size: 14px;
+      color: #555;
+    }
+    footer {
+      background: #2c3e50;
+      color: #bdc3c7;
+      text-align: center;
+      padding: 16px;
+      font-size: 13px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎬 My Movie Collection</h1>
+  </header>
+
+  <nav>
+    <a href="movies.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <h2>Top 5 Movies</h2>
+
+    <div class="jump-list">
+      <strong>Jump to a movie:</strong>
+      <ul>
+        <li><a href="#inception">Inception</a></li>
+        <li><a href="#interstellar">Interstellar</a></li>
+        <li><a href="#dark-knight">The Dark Knight</a></li>
+        <li><a href="#dangal">Dangal</a></li>
+        <li><a href="#3-idiots">3 Idiots</a></li>
+      </ul>
+    </div>
+
+    <div class="movie" id="inception">
+      <h3>1. Inception (2010)</h3>
+      <p>A thief who steals secrets through dream-sharing technology is given a chance to have his past crimes erased if he can plant an idea in a target's mind.</p>
+    </div>
+
+    <div class="movie" id="interstellar">
+      <h3>2. Interstellar (2014)</h3>
+      <p>Explorers travel through a wormhole in search of a new home for humanity as Earth becomes uninhabitable.</p>
+    </div>
+
+    <div class="movie" id="dark-knight">
+      <h3>3. The Dark Knight (2008)</h3>
+      <p>Batman faces the Joker, a criminal mastermind who wants to plunge Gotham into chaos.</p>
+    </div>
+
+    <div class="movie" id="dangal">
+      <h3>4. Dangal (2016)</h3>
+      <p>A former wrestler trains his daughters to become world-class wrestlers, fighting against societal norms.</p>
+    </div>
+
+    <div class="movie" id="3-idiots">
+      <h3>5. 3 Idiots (2009)</h3>
+      <p>Two friends search for their long-lost college buddy while recalling their days at an engineering college.</p>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Movie Hub. All rights reserved.
+  </footer>
+
+</body>
+</html>
