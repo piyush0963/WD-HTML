@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Favourite Artist & Food</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 680px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #222;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 26px;
+      color: #1a3b5c;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 22px;
+      color: #e23744;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 360px;
+      max-width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      display: block;
+      margin: 0 auto;
+    }
+
+    .biryani-img {
+      width: 400px;
+    }
+
+    a.ig {
+      display: inline-block;
+      margin-top: 20px;
+      background: #e1306c;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+    a.ig:hover {
+      background: #c1275c;
+    }
+
+    a.jump {
+      display: inline-block;
+      margin-top: 22px;
+      color: #2874f0;
+      text-decoration: none;
+      font-size: 15px;
+    }
+    a.jump:hover {
+      text-decoration: underline;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px dashed #ccc;
+      margin: 44px 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================= -->
+  <!-- SECTION 1: FAVOURITE ARTIST   -->
+  <!-- ============================= -->
+
+  <h1>My Favourite Artist: Arijit Singh</h1>
+
+  <!-- Arijit Singh photo from JioSaavn CDN -->
+  <img
+    src="https://c.saavncdn.com/artists/Arijit_Singh_004_20241118063717_500x500.jpg"
+    alt="Arijit Singh photo — Indian playback singer known for romantic Bollywood songs">
+
+  <!-- Alt text choice:
+       "Arijit Singh photo" pairs the artist's name with the word "photo",
+       so screen reader users hear exactly who is pictured and search engines
+       can index the image against "Arijit Singh photo" searches.
+       Adding "Indian playback singer known for romantic Bollywood songs"
+       gives context, so the image isn't just a name — it explains why he matters
+       on a music page. -->
+
+  <br>
+
+  <a class="ig" href="https://www.instagram.com/arijitsingh" target="_blank" rel="noopener">
+    Follow Arijit Singh on Instagram
+  </a>
+
+  <br>
+  <a class="jump" href="#food-section">See my favourite food item ↓</a>
+
+  <hr>
+
+  <!-- ============================= -->
+  <!-- SECTION 2: FAVOURITE FOOD     -->
+  <!-- ============================= -->
+
+  <h2 id="food-section">My Favourite Zomato Order: Chicken Biryani</h2>
+
+  <!-- Biryani photo from Unsplash -->
+  <img
+    class="biryani-img"
+    src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&q=80"
+    alt="Chicken biryani photo — a plate of aromatic basmati rice with spiced chicken, served with raita">
+
+  <!-- Alt text choice:
+       I described what the dish looks like — aromatic basmati rice with spiced
+       chicken and raita — instead of only writing "biryani". A screen reader user
+       can picture the meal, not just hear a dish name. Including "photo" and
+       "Chicken biryani" also helps SEO, while the visual details make the image
+       meaningful on a food page. -->
+
+  <br>
+  <a class="jump" href="#top">↑ Back to top</a>
+
+</body>
+</html>
